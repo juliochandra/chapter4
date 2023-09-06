@@ -65,7 +65,7 @@ function hitungBiayaParkir(lamaParkir, hari, liburNasional) {
 console.log(hitungBiayaParkir(2, 'Sabtu', false));
 // Output: Biaya Parkir: Rp15000.
 console.log(hitungBiayaParkir(6, 'Minggu', true));
-// Output: Biaya Parkir: Rp25000.
+// Output: Biaya Parkir: Rp30000.
 
 
 

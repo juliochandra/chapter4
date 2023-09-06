@@ -29,4 +29,47 @@ console.log(kategoriUsia(40));
 
 console.log("============ Soal Dua ============");
 
-const hitungBiayaParkir = (lamaParkir, hari, liburnasional) => {};
+const hitungBiayaParkir = (lamaParkir, hari, liburnasional) => {
+  let biayaParkir = 0;
+
+  if (typeof lamaParkir !== "number" || isNaN(lamaParkir) || lamaParkir < 0) {
+    return "lamaParkir tidak valid";
+  }
+
+  if (typeof hari !== "string") {
+    return "hari tidak valid";
+  } else {
+    hari = hari.toLowerCase();
+  }
+
+  if (typeof liburnasional !== "boolean") {
+    return "libur nasional tidak valid";
+  }
+
+  if (lamaParkir >= 1) {
+    biayaParkir += 10000;
+  }
+  if (lamaParkir > 1) {
+    biayaParkir += (lamaParkir - 1) * 5000;
+  }
+
+  if (lamaParkir > 5) {
+    biayaParkir -= 10000;
+  }
+
+  if (hari == "minggu") {
+    biayaParkir += 5000;
+  }
+
+  if (biayaParkir > 30000 && liburnasional) {
+    biayaParkir -= 7000;
+  }
+
+  return `Biaya Parkir: ${biayaParkir}`;
+};
+
+console.log(hitungBiayaParkir(2, "Sabtu", false));
+// Output: Biaya Parkir: Rp15000.
+console.log(hitungBiayaParkir(6, "Minggu", true));
+// Output: Biaya Parkir: Rp25000.
+
