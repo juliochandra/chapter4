@@ -95,10 +95,10 @@ function jadwalFestival(hari, cuaca, suhu, angin) {
   } else {
     cuaca = cuaca.toLowerCase();
   }
-  if (typeof suhu !== "number") {
+  if (typeof suhu !== "number" || isNaN(suhu)) {
     return "suhu tidak valid";
   }
-  if (typeof angin !== "number") {
+  if (typeof angin !== "number" || isNaN(angin)) {
     return "angin tidak valid";
   }
   // validation
@@ -108,6 +108,7 @@ function jadwalFestival(hari, cuaca, suhu, angin) {
   } else if (cuaca === "hujan" && angin < 20) {
     daftarAcara += "acara dalam ruangan, ";
   }
+
   if (suhu < 5) {
     daftarAcara += "acara dalam ruangan,";
   }
