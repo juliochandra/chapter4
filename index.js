@@ -82,7 +82,7 @@ console.log(hitungBiayaParkir(6, "Minggu", true));
 console.log("============ Soal Tiga ============");
 
 function jadwalFestival(hari, cuaca, suhu, angin) {
-  let daftarAcara = "Pameran seni, ";
+  let daftarAcara = "Pameran Seni";
 
   // validation
   if (typeof hari !== "string") {
@@ -104,22 +104,21 @@ function jadwalFestival(hari, cuaca, suhu, angin) {
   // validation
 
   if (cuaca === "hujan" && angin > 20) {
-    daftarAcara += "semua acara di luar ruangan akan dibatalkan, ";
+    daftarAcara;
   } else if (cuaca === "hujan" && angin < 20) {
-    daftarAcara += "acara dalam ruangan, ";
+    daftarAcara += ", Acara Dalam Ruangan";
   }
-
   if (suhu < 5) {
-    daftarAcara += "acara dalam ruangan,";
+    daftarAcara += ", Acara Dalam Ruangan";
   }
   if (cuaca === "cerah" && suhu > 25) {
-    daftarAcara += "pesta es krim, ";
+    daftarAcara += ", Pesta Es Krim";
   }
   if (hari === "minggu" && cuaca === "cerah") {
-    daftarAcara += "maraton senja";
+    daftarAcara += ", Maraton Senja";
   }
 
-  return `Daftar Acara: ${daftarAcara} `;
+  return `Daftar Acara: ${daftarAcara}. `;
 }
 
 console.log(jadwalFestival("Sabtu", "Hujan", 23, 30));
