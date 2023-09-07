@@ -40,13 +40,12 @@ for (let i = n; i >= 1; i--) {
 }
 
 console.log("");
-console.log("===Pola Segitiga Berlian===");
+console.log("===Pola Berlian===");
 console.log("");
 
 // Loop untuk menciptakan segitiga atas dari pola berlian
 let space = "";
 let star = "";
-let o = 4;
 
 for (let i = 1; i < 2 * n; i++) {
   if (i <= n) {
@@ -66,12 +65,39 @@ for (let i = 1; i < 2 * n; i++) {
     for (let j = 1; j <= i - n; j++) {
       space += " ";
     }
-    for (let k = 1; k <= o * 2 - 1; k++) {
+    for (let k = 1; k <= (n - (i - n)) * 2 - 1; k++) {
       star += "*";
     }
-    o--;
     console.log(space + star);
   }
+}
+
+console.log("");
+console.log("===Pola Berlian Cara Kedua===");
+console.log("");
+
+for (let i = 1; i <= n; i++) {
+  space = "";
+  star = "";
+  for (let j = 1; j <= n - i; j++) {
+    space += " ";
+  }
+  for (let k = 1; k <= i * 2 - 1; k++) {
+    star += "*";
+  }
+  console.log(space + star);
+}
+
+for (let i = 1; i < n; i++) {
+  space = "";
+  star = "";
+  for (let j = 1; j <= i; j++) {
+    space += " ";
+  }
+  for (let k = 1; k <= (n - i) * 2 - 1; k++) {
+    star += "*";
+  }
+  console.log(space + star);
 }
 
 console.log("");
@@ -88,4 +114,35 @@ for (let i = 1; i <= n; i++) {
     }
   }
   console.log(angka);
+}
+
+console.log("");
+console.log("===Pola Berlian===");
+console.log("");
+
+for (let i = 1; i < 2 * n; i++) {
+  // console.log(i);
+  space = "";
+  star = "";
+  if (i <= n) {
+    for (let j = 1; j <= n - i; j++) {
+      // console.log(j);
+      space += " ";
+    }
+    for (let k = 1; k <= i * 2 - 1; k++) {
+      // console.log(k);
+      star += "*";
+    }
+  }
+  if (i > n) {
+    for (let j = 1; j <= i - n; j++) {
+      // console.log(j);
+      space += " ";
+    }
+    for (let k = 1; k <= (n - (i - n)) * 2 - 1; k++) {
+      // console.log(k);
+      star += "*";
+    }
+  }
+  console.log(space + star);
 }
