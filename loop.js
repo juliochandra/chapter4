@@ -1,16 +1,16 @@
-// for (let i = 1; i <= 20; i++) {
-//   if (i % 2 == 0) {
-//     console.log(`${i} adalah angka genap`);
-//   } else if (i % 2 == 1) {
-//     console.log(`${i} adalah angka ganjil`);
-//   }
-// }
+for (let i = 1; i <= 20; i++) {
+  if (i % 2 == 0) {
+    console.log(`${i} adalah angka genap`);
+  } else if (i % 2 == 1) {
+    console.log(`${i} adalah angka ganjil`);
+  }
+}
 
-// let jumlah = 0;
-// for (let i = 0; i <= 100; i++) {
-//   jumlah += i;
-//   console.log(jumlah);
-// }
+let jumlah = 0;
+for (let i = 0; i <= 100; i++) {
+  jumlah += i;
+  console.log(jumlah);
+}
 
 let n = 5;
 
@@ -49,7 +49,6 @@ let star = "";
 let o = 4;
 
 for (let i = 1; i < 2 * n; i++) {
-  // console.log(i);
   if (i <= n) {
     space = "";
     star = "";
