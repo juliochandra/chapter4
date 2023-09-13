@@ -31,14 +31,14 @@ console.log("===Gabungkan Dua Array===");
 let arr1 = [1, 2, 3];
 let arr2 = [4, 5, 6];
 
-let result2 = [];
+let result1 = [];
 
 for (let i = 0; i < arr1.length; i++) {
-  result2.push(arr1[i]);
+  result1.push(arr1[i]);
 }
 
 for (let i = 0; i < arr2.length; i++) {
-  result2.push(arr2[i]);
+  result1.push(arr2[i]);
 }
 
 console.log(result2);
@@ -80,3 +80,4 @@ for (let i = 0; i < kumpulanAngka.length || i < kumpulanHuruf.length; i++) {
 }
 
 console.log(hasilGabungan);
+
